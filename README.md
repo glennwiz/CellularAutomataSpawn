@@ -2,14 +2,20 @@
 
 ![image](https://user-images.githubusercontent.com/195927/209436858-5697229b-c9db-417f-a780-be0229fa5851.png)
 
-This is a console application that simulates the behavior of cells in a 2D space. The program creates a list of `Cell` objects and initializes them with random properties such as their form, position, and movement bias. The program then enters an infinite loop, in which it moves each cell randomly and increments their age. 
+TThis C# code is a simulation of cellular automata in which cells move randomly on the console and can mutate. The cells are represented by the `Cell` class, which has the following properties:
+
+- `Id`: a unique identifier for each cell
+- `CellForm`: a string representation of the cell's form, chosen from the alphabet array
+- `X` and `Y`: the x and y coordinates of the cell's position on the console
+- `Mutations`: a list of `Mutation` objects, which contain information about the cell's mutations
+- `CellColor`: the color of the cell as it is displayed on the console
+- `IsAlive`: a boolean value indicating whether the cell is still alive or not
 
 ## Features
 - If a cell's age is greater than 10, it has a 10% chance of mutating.
 - If a cell's age is greater than 100, it has a 1% chance of dying. 
 - The program checks for collisions between cells and, if two cells collide, it creates 4 new cells and removes the colliding cells from the list. 
 - The program displays the number of cells on the top left corner of the console and clears the console before printing the cells' new positions.
-
 
 ## To-Do List
 
