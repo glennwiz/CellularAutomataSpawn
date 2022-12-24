@@ -56,11 +56,11 @@ namespace CellSim
                         cell.Mutations.Add(new Mutation {MovementBias = (MovementBias) _random.Next(1, 5)});
                     }
 
-                    //cells age > 100 have a 1% chance of dying
-                    // if (cell.Age > 100 && _random.Next(0, 1000) < 1)
-                    // {
-                    //     cell.IsAlive = false;
-                    // }
+                    //cells age > 100 have a 0.1% chance of dying
+                    if (cell.Age > 1000 && _random.Next(0, 1000) < 1)
+                    {
+                        cell.IsAlive = false;
+                    }
 
                     cell.MoveRandomly();
                     cell.Age++;
@@ -82,12 +82,26 @@ namespace CellSim
                         {
                             if (cells[i].X == cells[j].X && cells[i].Y == cells[j].Y)
                             {
-                                //clear the dead cell from the screen
+                                //cells[i].X and cells[i].Y sould never be less than 0
+                                if (cells[i].X < 0)
+                                {
+                                    cells[i].X = 0;
+                                }
+                                
+                                if (cells[i].Y < 0)
+                                {
+                                    cells[i].Y = 0;
+                                }
+                                
+
+                                //kill the colliding cells
                                 Console.SetCursorPosition(cells[i].X % Console.BufferWidth,
                                     cells[i].Y % Console.BufferHeight);
                                 Console.Write(" ");
                                 cells[i].IsAlive = false;
                                 cells[j].IsAlive = false;
+                                
+                                
                                 // Cells have collided, create 4 new cells
                                 for (int k = 0; k < 4; k++)
                                 {
@@ -174,6 +188,18 @@ namespace CellSim
                 return;
             }
 
+            //x and y cant be less than 0
+            if (X < 0)
+            {
+                X = 0;
+            }
+
+            if (Y < 0)
+            {
+                Y = 0;
+            }
+            
+            
             // Clear current cell position
             Console.SetCursorPosition(X % Console.BufferWidth, Y % Console.BufferHeight);
             Console.Write(" ");
