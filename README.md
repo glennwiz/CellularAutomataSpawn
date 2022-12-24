@@ -1,6 +1,6 @@
 # CellSim
 
-![image](https://user-images.githubusercontent.com/195927/209434435-95e9031e-4901-435b-92cf-d7ef1fc998e3.png)
+![image](https://user-images.githubusercontent.com/195927/209436858-5697229b-c9db-417f-a780-be0229fa5851.png)
 
 This is a console application that simulates the behavior of cells in a 2D space. The program creates a list of `Cell` objects and initializes them with random properties such as their form, position, and movement bias. The program then enters an infinite loop, in which it moves each cell randomly and increments their age. 
 
