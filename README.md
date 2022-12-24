@@ -13,6 +13,7 @@ This is a console application that simulates the behavior of cells in a 2D space
 
 ## To-Do List
 
+- [ ] Trail mutation: Leaves a diffrent trail, like * - , ¨ \ ` and so on.
 - [ ] Agro Mutation: Allow cells to hunt and consume other cells to gain energy
 - [ ] Cell reproduction: Allow cells to reproduce by splitting into two new cells when their age reaches a certain threshold.
 - [ ] Cell fusion: Allow cells to reproduce by fusing with another cell when they collide.
