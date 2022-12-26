@@ -22,6 +22,7 @@ TThis C# code is a simulation of cellular automata in which cells move randomly 
 - [ ] Trail mutation: Leaves a diffrent trail, like * - , ¨ \ ` and so on.
 - [ ] Add Energy: cells dont have any enegy atm, so add energy and depletion on movment.
 - [ ] Agro Mutation: Allow cells to hunt and consume other cells to gain energy, should burn more energy when hunting
+- [ ] Runner: Avoid others when energy > 80%
 - [ ] Cell reproduction: Allow cells to reproduce by splitting into two new cells when their age reaches a certain threshold.
 - [ ] Cell fusion: Allow cells to reproduce by fusing with another cell when they collide.
 - [ ] Movement speed mutation: Allow cells to mutate to become faster or slower.
